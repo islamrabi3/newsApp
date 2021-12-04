@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news/newsCubit/news_cubit.dart';
 import 'package:news/news_layout.dart';
 import 'package:news/observer/bloc_observer.dart';
+import 'package:news/screens/animated_splashscreen.dart';
 import 'package:news/shared/dio_helper.dart';
 
 void main() {
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
             systemOverlayStyle: SystemUiOverlayStyle.light,
           ),
         ),
-        home: NewsLayout(),
+        home: SplashScreen(),
       ),
     );
   }

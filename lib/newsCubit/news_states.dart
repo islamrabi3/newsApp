@@ -33,3 +33,5 @@ class LoadingSearchState extends NewsStates {}
 class SuccessSearchState extends NewsStates {}
 
 class ErrorSearchState extends NewsStates {}
+
+class LaunchSuccessState extends NewsStates {}

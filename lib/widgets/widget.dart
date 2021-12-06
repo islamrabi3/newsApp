@@ -1,9 +1,16 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:news/screens/webview_screen.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 Widget buildArticleItems(model, context) => InkWell(
       onTap: () {
-        naviagteTo(context, WebViewScreen(model['url']));
+        if (Platform.isWindows) {
+          launch(model['url']);
+        } else {
+          launch(model['url'], enableJavaScript: true, forceWebView: true);
+        }
       },
       child: Padding(
         padding: const EdgeInsets.all(8.0),
